@@ -199,23 +199,28 @@ export default class extends Vue {
 }
 @media only screen and (max-width: 490px) {
   .box_notification {
-    .el-button {
-      padding: 5px;
-      span {
-        font-size: 20px;
-        display: inline-block;
-        margin-top: 15px;
-      }
-    }
     .notification {
+      .count_notification {
+        width: 15px;
+        height: 15px;
+        top: 10px;
+      }
+      .el-button.icon_button {
+        padding: 2px;
+        span {
+          font-size: 18px;
+          display: inline-block;
+          margin-top: 15px;
+        }
+      }
       .overlay {
         right: -50px;
         max-width: 350px;
         li {
           .content {
-              .title{
-                  font-size: 13px;
-              }
+            .title {
+              font-size: 13px;
+            }
             font-size: 13px;
           }
         }

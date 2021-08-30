@@ -19,13 +19,13 @@
     <ul class="overlay">
       <li @click="ChangeLang('en')">
         <div class="img">
-          <img src="@/assets/us.png" alt="" />
+          <img :src="require('@/assets/us.png')" alt="" />
         </div>
         <span>English</span>
       </li>
       <li @click="ChangeLang('vi')">
         <div class="img">
-          <img src="@/assets/vn.png" alt="" />
+          <img :src="require('@/assets/vn.png')" alt="" />
         </div>
         <span>Tiếng Việt</span>
       </li>
@@ -131,6 +131,16 @@ export default class extends Vue {
 .box_lang_show {
   .overlay {
     max-height: 1000px;
+  }
+}
+@media only screen and (max-width: 756px) {
+  .box_lang {
+    .overlay {
+      left: -100px;
+      li {
+        padding: 0px 20px;
+      }
+    }
   }
 }
 @media only screen and (max-width: 490px) {

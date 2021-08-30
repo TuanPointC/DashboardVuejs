@@ -1,10 +1,12 @@
 <template>
   <el-container>
     <el-header>
-      <header-layout />
+      <header-layout v-on:changeNavBar="(showNavBar = !showNavBar)" />
     </el-header>
     <el-container>
-      <el-aside width="200px">Aside</el-aside>
+      <el-aside :width="showNavBar?'250px':'0px'">
+        <aside-main />
+      </el-aside>
       <el-container>
         <el-main>Main</el-main>
         <el-footer>Footer</el-footer>
@@ -14,15 +16,18 @@
 </template>
 
 <script lang='ts'>
-import { component } from "vue/types/umd";
 import HeaderLayout from "./Header/HeaderComponent.vue";
 import { Options, Vue } from "vue-class-component";
+import AsideMain from "./Aside/AsideMain.vue";
 @Options({
   components: {
     HeaderLayout,
+    AsideMain,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  private showNavBar = false;
+}
 </script>
 
 <style lang='scss' scoped>
@@ -39,7 +44,10 @@ export default class Home extends Vue {}
   color: var(--el-text-color-primary);
   text-align: center;
   line-height: 200px;
+  transition: 0.5s;
+
 }
+
 
 .el-main {
   background-color: white;
@@ -60,4 +68,5 @@ body > .el-container {
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
 }
+
 </style>

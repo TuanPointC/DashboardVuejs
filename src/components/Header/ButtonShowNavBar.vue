@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ button_show_menu: true, button_hidden_menu: show }"
-    @click="ChangeShow"
+    @click="ChangeShow(),$emit('changeNavBar')" 
   >
     <div class="box_button">
       <div class="line line1"></div>
@@ -60,5 +60,18 @@ export default class Home extends Vue {
   .line3 {
     transform: rotate(-45deg) translate(3px, -3px);
   }
+}
+@media only screen and (max-width: 720px) {
+  .button_show_menu {
+  width: 25px;
+  height: 25px;
+  .line {
+    width: 15px;
+    height: 1.6px;
+    background: white;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+}
 }
 </style>

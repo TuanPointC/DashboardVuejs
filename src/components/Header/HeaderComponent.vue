@@ -1,7 +1,7 @@
 <template>
   <div class="header_component">
     <div class="group1">
-      <button-show-nav-bar />
+      <button-show-nav-bar v-on:changeNavBar="$emit('changeNavBar')"/>
       <text-logo class="text_logo" />
     </div>
     <search-area class="search_area" />
@@ -34,7 +34,9 @@ import ShowMore from "./ShowMore.vue";
     ShowMore,
   },
 })
-export default class extends Vue {}
+export default class extends Vue {
+  
+}
 </script>
 
 <style scoped lang='scss'>

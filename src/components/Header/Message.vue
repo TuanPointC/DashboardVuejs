@@ -41,7 +41,6 @@ export default class extends Vue {
   display: flex;
   align-items: center;
   .message,
-  .notification,
   .theme {
     position: relative;
     .count_message,
@@ -79,14 +78,24 @@ export default class extends Vue {
 }
 @media only screen and (max-width: 490px) {
   .box_message {
+  .message,
+  .theme {
+    .count_message,
+    .count_notification {
+      width: 15px;
+      height: 15px;
+      font-size: 10px;
+      top: 10px;
+      right: 5px;
+    }
     .el-button {
       padding: 5px;
       span {
-        font-size: 20px;
-        display: inline-block;
-        margin-top: 15px;
+        color: white;
+        font-size: 15px;
       }
     }
   }
+}
 }
 </style>

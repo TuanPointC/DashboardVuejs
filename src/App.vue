@@ -22,4 +22,8 @@ export default class extends Vue {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.el-collapse-item__header{
+  border: none!important;
+  padding-left:20px ;
+}
 </style>

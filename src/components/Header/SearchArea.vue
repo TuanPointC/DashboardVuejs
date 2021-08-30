@@ -53,4 +53,18 @@ export default class extends Vue {
     width: 100%;
   }
 }
+@media only screen and (max-width: 720px) {
+.search {
+  span {
+    font-size: 18px;
+  }
+  .input {
+    padding: 2px;
+    padding-left: 20px;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+  }
+}
+}
 </style>
