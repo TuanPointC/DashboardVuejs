@@ -31,19 +31,19 @@ export default class Home extends Vue {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 1.6px solid rgb(185, 185, 185);
+  border: 1.6px solid var(--color-white1);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: 0.3s;
   &:hover {
-    background: rgb(80, 79, 79);
+    background: var(--color-hover-white);
     cursor: pointer;
   }
   .line {
     width: 20px;
     height: 1.6px;
-    background: white;
+    background: var(--color-white1);
     margin: 3px 0;
     transition: 0.3s;
   }
@@ -68,7 +68,7 @@ export default class Home extends Vue {
   .line {
     width: 15px;
     height: 1.6px;
-    background: white;
+    background: var(--color-white1);
     margin: 3px 0;
     transition: 0.3s;
   }

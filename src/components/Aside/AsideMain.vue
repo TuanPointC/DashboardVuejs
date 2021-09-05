@@ -4,83 +4,254 @@
       <el-collapse-item name="1">
         <template #title>
           <span class="mdi mdi-view-dashboard"></span>
-          {{$t('dashboard')}}
+          {{ $t("dashboard") }}
         </template>
         <div class="sub_menu">
           <ul class="list_sub_menu">
-            <li> {{$t('default')}}</li>
-            <li> {{$t('anatylic')}}</li>
-            <li>{{$t('e-commerce')}}</li>
-            <li>{{$t('social')}}</li>
-            <li>{{$t('crypto')}}</li>
+            <router-link to="/DashboardDefault">
+              <li
+                :class="{ hover: 'DashboardDefault' == $route.path.slice(1) }"
+              >
+                {{ $t("default") }}
+              </li>
+            </router-link>
+            <router-link to="/DashboardAnatylic">
+              <li
+                :class="{ hover: 'DashboardAnatylic' == $route.path.slice(1) }"
+              >
+                {{ $t("anatylic") }}
+              </li>
+            </router-link>
+            <router-link to="/DashboardEcommerce">
+              <li
+                :class="{ hover: 'DashboardEcommerce' == $route.path.slice(1) }"
+              >
+                {{ $t("e-commerce") }}
+              </li>
+            </router-link>
+            <router-link to="/DashboardSocial">
+              <li :class="{ hover: 'DashboardSocial' == $route.path.slice(1) }">
+                {{ $t("social") }}
+              </li>
+            </router-link>
+
+            <router-link to="/DashboardCrypto">
+              <li :class="{ hover: 'DashboardCrypto' == $route.path.slice(1) }">
+                {{ $t("crypto") }}
+              </li>
+            </router-link>
           </ul>
         </div>
       </el-collapse-item>
       <el-collapse-item name="2">
         <template #title>
           <span class="mdi mdi-book-open-outline"></span>
-          {{$t('page')}}
+          {{ $t("page") }}
         </template>
         <div class="sub_menu">
           <ul class="list_sub_menu">
-            <li>{{$t('profile')}}</li>
-            <li>{{$t('settings')}}</li>
-            <li>{{$t('client')}}</li>
-            <li>{{$t('project')}}</li>
-            <li>{{$t('invoice')}}</li>
-            <li>{{$t('pricing')}}</li>
-            <li>{{$t('task')}}</li>
-            <li>{{$t('chat')}}</li>
-            <li>{{$t('blackPage')}}</li>
+            <router-link to="/PageProfiles">
+              <li :class="{ hover: 'PageProfiles' == $route.path.slice(1) }">
+                {{ $t("profile") }}
+              </li>
+            </router-link>
+            <router-link to="/PageSettings">
+              <li :class="{ hover: 'PageSettings' == $route.path.slice(1) }">
+                {{ $t("settings") }}
+              </li>
+            </router-link>
+            <router-link to="/PageClients">
+              <li :class="{ hover: 'PageClients' == $route.path.slice(1) }">
+                {{ $t("client") }}
+              </li>
+            </router-link>
+            <router-link to="/PageInvoice">
+              <li :class="{ hover: 'PageInvoice' == $route.path.slice(1) }">
+                {{ $t("invoice") }}
+              </li>
+            </router-link>
+
+            <li>{{ $t("project") }}</li>
+
+            <router-link to="/PagePricing">
+              <li :class="{ hover: 'PagePricing' == $route.path.slice(1) }">
+                {{ $t("pricing") }}
+              </li>
+            </router-link>
+            <router-link to="/PageTask">
+              <li :class="{ hover: 'PageTask' == $route.path.slice(1) }">
+                {{ $t("task") }}
+              </li>
+            </router-link>
+            <router-link to="/PageChat">
+              <li :class="{ hover: 'PageChat' == $route.path.slice(1) }">
+                {{ $t("chat") }}
+              </li>
+            </router-link>
+            <router-link to="/PageBlankPage">
+              <li :class="{ hover: 'PageBlankPage' == $route.path.slice(1) }">
+                {{ $t("blackPage") }}
+              </li>
+            </router-link>
           </ul>
         </div>
       </el-collapse-item>
       <el-collapse-item name="3">
         <template #title>
           <span class="mdi mdi-account-group"></span>
-          {{$t('authentication')}}
+          {{ $t("authentication") }}
         </template>
         <div class="sub_menu">
           <ul class="list_sub_menu">
-            <li>{{$t('login')}}</li>
-            <li>{{$t('signUp')}}</li>
-            <li>{{$t('resetPassword')}}</li>
-            <li>{{$t('404Page')}}</li>
-            <li>{{$t('500Page')}}</li>
+            <router-link to="/AuthenticationLogin">
+              <li
+                :class="{
+                  hover: 'AuthenticationLogin' == $route.path.slice(1),
+                }"
+              >
+                {{ $t("login") }}
+              </li>
+            </router-link>
+            <router-link to="/AuthenticationSignUp">
+              <li
+                :class="{
+                  hover: 'AuthenticationSignUp' == $route.path.slice(1),
+                }"
+              >
+                {{ $t("signUp") }}
+              </li>
+            </router-link>
+            <router-link to="/AuthenticationResetPassword">
+              <li
+                :class="{
+                  hover: 'AuthenticationResetPassword' == $route.path.slice(1),
+                }"
+              >
+                {{ $t("resetPassword") }}
+              </li>
+            </router-link>
+            <router-link to="/Authentication404Page">
+              <li
+                :class="{
+                  hover: 'Authentication404Page' == $route.path.slice(1),
+                }"
+              >
+                {{ $t("404Page") }}
+              </li>
+            </router-link>
+            <router-link to="/Authentication500Page">
+              <li
+                :class="{
+                  hover: 'Authentication500Page' == $route.path.slice(1),
+                }"
+              >
+                {{ $t("500Page") }}
+              </li>
+            </router-link>
           </ul>
         </div>
       </el-collapse-item>
       <el-collapse-item name="4">
         <template #title>
           <span class="mdi mdi-book-open"></span>
-          {{$t('document')}}
+          {{ $t("document") }}
         </template>
         <div class="sub_menu">
           <ul class="list_sub_menu">
-            <li>{{$t('introduction')}}</li>
-            <li>{{$t('getStarted')}}</li>
-            <li>Plugins</li>
-            <li>Chanelog</li>
+            <router-link to="/DocumentIntroduction">
+              <li
+                :class="{
+                  hover: 'DocumentIntroduction' == $route.path.slice(1),
+                }"
+              >
+                {{ $t("introduction") }}
+              </li>
+            </router-link>
+            <router-link to="/DocumentGettingStarted">
+              <li
+                :class="{
+                  hover: 'DocumentGettingStarted' == $route.path.slice(1),
+                }"
+              >
+                {{ $t("getStarted") }}
+              </li>
+            </router-link>
+            <router-link to="/DocumentPlugins">
+              <li :class="{ hover: 'DocumentPlugins' == $route.path.slice(1) }">
+                Plugins
+              </li>
+            </router-link>
+            <router-link to="/DocumentChangelog">
+              <li
+                :class="{ hover: 'DocumentChangelog' == $route.path.slice(1) }"
+              >
+                Chanelog
+              </li>
+            </router-link>
           </ul>
         </div>
       </el-collapse-item>
       <el-collapse-item name="5">
         <template #title>
           <span class="mdi mdi-google-circles-communities"></span>
-          {{$t('uielements')}}
+          {{ $t("uielements") }}
         </template>
         <div class="sub_menu">
           <ul class="list_sub_menu">
-            <li>{{$t('alerts')}}</li>
-            <li>{{$t('buttons')}}</li>
-            <li>{{$t('cards')}}</li>
-            <li>Carousel</li>
-            <li>{{$t('embedVideo')}}</li>
-            <li>{{$t('general')}}</li>
-            <li>{{$t('grid')}}</li>
-            <li>Modals</li>
-            <li>Tabs</li>
-            <li>Typography</li>
+            <router-link to="/ElementAlerts">
+              <li :class="{ hover: 'ElementAlerts' == $route.path.slice(1) }">
+                {{ $t("alerts") }}
+              </li>
+            </router-link>
+            <router-link to="/ElementButtons">
+              <li :class="{ hover: 'ElementButtons' == $route.path.slice(1) }">
+                {{ $t("buttons") }}
+              </li>
+            </router-link>
+            <router-link to="/ElementCards">
+              <li :class="{ hover: 'ElementCards' == $route.path.slice(1) }">
+                {{ $t("cards") }}
+              </li>
+            </router-link>
+            <router-link to="/ElementCarousel">
+              <li :class="{ hover: 'ElementCarousel' == $route.path.slice(1) }">
+                Carousel
+              </li>
+            </router-link>
+            <router-link to="/ElementEmbedVideo">
+              <li
+                :class="{ hover: 'ElementEmbedVideo' == $route.path.slice(1) }"
+              >
+                {{ $t("embedVideo") }}
+              </li>
+            </router-link>
+            <router-link to="/ElementGeneral">
+              <li :class="{ hover: 'ElementGeneral' == $route.path.slice(1) }">
+                {{ $t("general") }}
+              </li>
+            </router-link>
+            <router-link to="/ElementGrids">
+              <li :class="{ hover: 'ElementGrids' == $route.path.slice(1) }">
+                {{ $t("grid") }}
+              </li>
+            </router-link>
+            <router-link to="/ElementModals">
+              <li :class="{ hover: 'ElementModals' == $route.path.slice(1) }">
+                Modals
+              </li>
+            </router-link>
+            <router-link to="/ElementTabs">
+              <li :class="{ hover: 'ElementTabs' == $route.path.slice(1) }">
+                Tabs
+              </li>
+            </router-link>
+            <router-link to="/ElementTypography">
+              <li
+                :class="{ hover: 'ElementTypography' == $route.path.slice(1) }"
+              >
+                Typography
+              </li>
+            </router-link>
           </ul>
         </div>
       </el-collapse-item>
@@ -91,8 +262,22 @@
         </template>
         <div class="sub_menu">
           <ul class="list_sub_menu">
-            <li>Material Design Icon</li>
-            <li>Font Awesome 5</li>
+            <router-link to="/IconsFontAwesome">
+              <li
+                :class="{ hover: 'IconsFontAwesome' == $route.path.slice(1) }"
+              >
+                Material Design Icon
+              </li>
+            </router-link>
+            <router-link to="/IconsMaterialDesignIcon">
+              <li
+                :class="{
+                  hover: 'IconsMaterialDesignIcon' == $route.path.slice(1),
+                }"
+              >
+                Font Awesome 5
+              </li>
+            </router-link>
           </ul>
         </div>
       </el-collapse-item>
@@ -104,8 +289,8 @@
         <div class="sub_menu">
           <ul class="list_sub_menu">
             <li>Layouts</li>
-            <li>{{$t('basicInput')}}</li>
-            <li>{{$t('inputGroups')}}</li>
+            <li>{{ $t("basicInput") }}</li>
+            <li>{{ $t("inputGroups") }}</li>
           </ul>
         </div>
       </el-collapse-item>
@@ -123,8 +308,8 @@
         <div class="sub_menu">
           <ul class="list_sub_menu">
             <li>Advanced Inputs</li>
-            <li>{{$t('editors')}}</li>
-            <li>{{$t('validation')}}</li>
+            <li>{{ $t("editors") }}</li>
+            <li>{{ $t("validation") }}</li>
             <li>Wizard</li>
           </ul>
         </div>
@@ -137,8 +322,8 @@
         <div class="sub_menu">
           <ul class="list_sub_menu">
             <li>Reponsive Tables</li>
-            <li>{{$t('tableWithButtons')}}</li>
-            <li>{{$t('columnSearch')}}</li>
+            <li>{{ $t("tableWithButtons") }}</li>
+            <li>{{ $t("columnSearch") }}</li>
             <li>Multi Select</li>
             <li>Ajax Sourced Data</li>
           </ul>
@@ -159,13 +344,13 @@
       <el-collapse-item name="12">
         <template #title>
           <span class="mdi mdi-bell-ring"></span>
-          {{$t('notification')}}
+          {{ $t("notification") }}
         </template>
       </el-collapse-item>
       <el-collapse-item name="13">
         <template #title>
           <span class="mdi mdi-google-maps"></span>
-          {{$t('maps')}}
+          {{ $t("maps") }}
         </template>
         <div class="sub_menu">
           <ul class="list_sub_menu">
@@ -177,7 +362,7 @@
       <el-collapse-item name="14">
         <template #title>
           <span class="mdi mdi-calendar"></span>
-          {{$t('calendar')}}
+          {{ $t("calendar") }}
         </template>
       </el-collapse-item>
       <el-collapse-item name="15">
@@ -204,15 +389,14 @@ export default class extends Vue {}
 
 <style scoped lang='scss'>
 .navbar {
-  background: black;
+  background: var(--background-black2);
   .el-collapse {
-    height: 90vh;
-    overflow: auto;
-    background: black;
-    --el-collapse-content-background-color: black;
-    --el-collapse-header-background-color: black;
-    --el-collapse-header-font-color: white;
-    --el-collapse-content-font-color: white;
+    height: 92vh;
+    background: var(--background-black2);
+    --el-collapse-content-background-color: var(--background-black2);
+    --el-collapse-header-background-color: var(--background-black2);
+    --el-collapse-header-font-color: var(--color-white1);
+    --el-collapse-content-font-color: var(--color-white1);
     span {
       font-size: 20px;
       margin-right: 20px;
@@ -225,18 +409,24 @@ export default class extends Vue {}
           padding: 10px 10px 10px 30px;
           cursor: pointer;
           transition: 0.3;
+          color: var(--color-white1);
           &:hover {
-            background: gray;
+            background: var(--color-hover-white);
           }
         }
       }
       &:hover {
-        --el-collapse-header-background-color: gray;
+        --el-collapse-header-background-color: var(--color-hover-white);
       }
       .el-collapse-item__header {
         transition: 0.3s !important;
       }
     }
+  }
+}
+.navbar {
+  li.hover {
+    background: #19d257 !important;
   }
 }
 </style>

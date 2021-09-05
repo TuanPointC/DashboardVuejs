@@ -62,9 +62,9 @@ export default class extends Vue {
   .el-button{
       background: none;
       border: none;
-      color: white;
+      color: var(--color-white1);
       &:hover{
-          background: gray;
+          background: var(--color-white2);
       }
   }
   .overlay {
@@ -72,7 +72,7 @@ export default class extends Vue {
     top: 65px;
     left: -20px;
     width: 150px;
-    background: black;
+    background: var(--background-black1);
     list-style: none;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 5px;
@@ -83,14 +83,14 @@ export default class extends Vue {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      color: white;
+      color: var(--color-white1);
       transition: 0.3s;
       padding: 0 20px;
       cursor: pointer;
       font-size: 15px;
       line-height: 35px;
       &:hover {
-        background: gray;
+        background: var( --color-hover-white);
       }
     }
   }

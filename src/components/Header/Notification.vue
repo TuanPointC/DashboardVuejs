@@ -91,11 +91,13 @@ export default class extends Vue {
 </script>
 
 <style scoped lang='scss'>
+
 .box_notification {
   display: flex;
   align-items: center;
   .notification {
     position: relative;
+    z-index: 99;
     .count_notification {
       width: 20px;
       height: 20px;
@@ -104,7 +106,7 @@ export default class extends Vue {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: var(--color-white1);
       font-weight: bold;
       font-size: 10px;
       position: absolute;
@@ -117,11 +119,11 @@ export default class extends Vue {
       outline: none;
       transition: all 0.2s ease;
       &:hover {
-        background: gray !important;
+        background: var(--color-hover-white) !important;
       }
 
       span {
-        color: white;
+        color: var(--color-white1);
         font-size: 25px;
       }
     }
@@ -130,7 +132,7 @@ export default class extends Vue {
       top: 65px;
       right: -40px;
       width: 450px;
-      background: black;
+      background: var(--background-black1);
       list-style: none;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       border-radius: 5px;
@@ -138,20 +140,20 @@ export default class extends Vue {
       max-height: 0px;
       overflow: hidden;
       .top_title {
-        color: white;
+        color: var(--color-white1);
       }
       li {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: white;
+        color: var(--color-white1);
         transition: 0.3s;
         padding: 10px 20px;
         cursor: pointer;
         font-size: 15px;
-        border-top: 1px solid gray;
+        border-top: 1px solid var(--color-white2);
         &:hover {
-          background: gray;
+          background: var( --color-hover-white);
         }
         .img {
           width: 30px;
@@ -170,7 +172,7 @@ export default class extends Vue {
           text-align: left;
           margin-left: 15px;
           width: 90%;
-          color: rgb(175, 174, 174);
+          color: var(--color-white1);
 
           .title {
             font-weight: bold;

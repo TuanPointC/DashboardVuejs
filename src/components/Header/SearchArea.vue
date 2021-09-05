@@ -18,13 +18,13 @@ import { Options, Vue } from "vue-class-component";
 })
 export default class extends Vue {
   private contentInput = "";
-  private color = "white";
+  private color = "var(--color-white1)";
   changeColor() {
-    this.color = this.color == "white" ? "blue" : "white";
+    this.color = this.color == "var(--color-white1)" ? "blue" : "var(--color-white1)";
   }
 
   changeColorWhenClickOutside(){
-    this.color= 'white'
+    this.color= 'var(--color-white1)'
   }
 
 }
@@ -38,7 +38,7 @@ export default class extends Vue {
     position: absolute;
     top: 1px;
     left: 1px;
-    color: white;
+    color: var(--color-white1);
     font-size: 25px;
     z-index: 0;
   }
@@ -46,7 +46,7 @@ export default class extends Vue {
     background: none;
     padding: 5px;
     border: none;
-    color: white;
+    color: var(--color-white1);
     padding-left: 30px;
     font-size: 18px;
     outline: none;

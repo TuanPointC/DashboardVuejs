@@ -14,7 +14,7 @@
       </el-tooltip>
     </div>
 
-    <div class="theme">
+    <div class="theme" @click="changeColor2">
       <el-button circle>
         <span class="mdi mdi-hexagon-slice-3"></span>
       </el-button>
@@ -24,6 +24,7 @@
 
 <script lang='ts'>
 import { Options, Vue } from "vue-class-component";
+declare var require: any;
 @Options({
   components: {},
 })
@@ -32,6 +33,27 @@ export default class extends Vue {
   private color = "white";
   changeColor() {
     this.color = this.color == "white" ? "blue" : "white";
+  }
+  root = document.documentElement;
+  count = 0;
+  changeColor2() {
+    this.count++;
+    if (this.count % 2 == 0) {
+      this.root.style.setProperty("--background-black1", "black");
+      this.root.style.setProperty("--background-black2", "#272727");
+      this.root.style.setProperty("--background-black3", "#DCDCDC");
+      this.root.style.setProperty("--color-white1", "white");
+      this.root.style.setProperty("--color-white2", "#757575");
+      this.root.style.setProperty("--color-hover-white", "#1976D2");
+    }
+    else{
+      this.root.style.setProperty("--background-black1", "white");
+      this.root.style.setProperty("--background-black2", "#FFFFFF");
+      this.root.style.setProperty("--background-black3", "#DCDCDC");
+      this.root.style.setProperty("--color-white1", "black");
+      this.root.style.setProperty("--color-white2", "#717171");
+      this.root.style.setProperty("--color-hover-white", "#1976D2");
+    }
   }
 }
 </script>
@@ -43,6 +65,7 @@ export default class extends Vue {
   .message,
   .theme {
     position: relative;
+    z-index: 99;
     .count_message,
     .count_notification {
       width: 20px;
@@ -52,7 +75,7 @@ export default class extends Vue {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: var(--color-white1);
       font-weight: bold;
       font-size: 10px;
       position: absolute;
@@ -66,11 +89,11 @@ export default class extends Vue {
       transition: all 0.2s ease;
 
       &:hover {
-        background: gray !important;
+        background: var(--color-hover-white) !important;
       }
 
       span {
-        color: white;
+        color: var(--color-white1);
         font-size: 25px;
       }
     }
@@ -78,24 +101,24 @@ export default class extends Vue {
 }
 @media only screen and (max-width: 490px) {
   .box_message {
-  .message,
-  .theme {
-    .count_message,
-    .count_notification {
-      width: 15px;
-      height: 15px;
-      font-size: 10px;
-      top: 10px;
-      right: 5px;
-    }
-    .el-button {
-      padding: 5px;
-      span {
-        color: white;
-        font-size: 15px;
+    .message,
+    .theme {
+      .count_message,
+      .count_notification {
+        width: 15px;
+        height: 15px;
+        font-size: 10px;
+        top: 10px;
+        right: 5px;
+      }
+      .el-button {
+        padding: 5px;
+        span {
+          color: var(--color-white1);
+          font-size: 15px;
+        }
       }
     }
   }
-}
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div class="logo">
     <span class="mobilde_text">
-      <span class="text1">P</span>
-      <span class="text2">K</span>
+      <span class="text1">T</span>
+      <span class="text2">.C</span>
     </span>
     <span class="desktop_text">
-      <span class="text1">PHENI</span>
-      <span class="text2">KAA</span>
+      <span class="text1">TUAN</span>
+      <span class="text2">.C</span>
     </span>
   </div>
 </template>
